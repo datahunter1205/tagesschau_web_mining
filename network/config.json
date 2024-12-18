@@ -9,8 +9,8 @@
   },
   "text": {
     "more": "Ein Graph über die vorkommenden Tags und ihre Beziehung untereinander auf der Internetpräsenz der Tagesschau. Zeitraum: 01.01.2023 bis 17.12.2024.",
-    "intro": "Relationsanalyse der Tags auf der Internetpräsenz der Tagesschau. Von Rakibul Haque",
-    "title": "Tagesschau-Web Mining"
+    "intro": "Relationsanalyse der Tags auf der Internetpräsenz der Tagesschau",
+    "title": "Tagesschau-Web Mining<br>\n Von Rakibul Haque"
   },
   "legend": {
     "edgeLabel": "Gemeinsames Vorkommen",
