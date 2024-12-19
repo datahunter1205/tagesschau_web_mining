@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt mit Vorschaubildern</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077b5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .project h2 {
+            color: #0077b5;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .preview-links {
+            display: flex;
+            gap: 15px; /* Abstand zwischen den Bildern */
+            margin-top: 10px;
+        }
+
+        .preview-links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .preview-links img {
+            width: 200px; /* Breite der Vorschaubilder */
+            height: 150px; /* Höhe der Vorschaubilder */
+            object-fit: cover; /* Schneidet das Bild, ohne das Seitenverhältnis zu verändern */
+            border-radius: 5px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .preview-links img:hover {
+            transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rakibul Haque - Projektübersicht</h1>
+    </header>
+    <main>
+        <div class="project">
+            <h2>Tagesschau-Web Mining</h2>
+            <p>
+                Dieses Projekt visualisiert die Relationen zwischen Tags, die in den Artikeln von Tagesschau.de verwendet werden. Es ermöglicht die Untersuchung der Verbindungen und Häufigkeiten von Tags, um Beziehungen zwischen verschiedenen Themen und deren Bedeutung in den Artikeln zu entdecken. Die interaktive Darstellung bietet eine intuitive Möglichkeit, die Struktur und Schwerpunkte der Inhalte zu erkunden und tiefere Einblicke in die Zusammenhänge der journalistischen Inhalte zu gewinnen.
+                <br><br>
+                Das Projekt richtet sich an alle, die sich für die Verknüpfungen und semantischen Beziehungen in journalistischen Texten interessieren und die Bedeutung dieser Tags in einem größeren Kontext verstehen möchten.
+            </p>
+            <div class="preview-links">
+                <!-- Erster Link -->
+                <a href="https://rakibulhaque.de/tagesschau_web_network/" target="_blank">
+                    <img src="Tagesschau-Web-Interactive-Network.png" alt="Tagesschau Interactive Network">
+                </a>
+                <!-- Zweiter Link -->
+                <a href="https://rakibulhaque.de/static/tagesschau_web_deep_img/" target="_blank">
+                    <img src="Tagesschau-Deep-Zoom.png" alt="Tagesschau Deep Zoom">
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
