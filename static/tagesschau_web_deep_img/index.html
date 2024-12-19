@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepZoom Viewer</title>
+    <!-- Lokale OpenSeadragon-Bibliothek -->
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #openseadragon {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="openseadragon"></div>
+    <script>
+        // OpenSeadragon initialisieren
+        var viewer = OpenSeadragon({
+            id: "openseadragon",
+            prefixUrl: "openseadragon/images/",
+            tileSources: "tiles/deepzoom_output.dzi"
+        });
+    </script>
+</body>
+</html>
