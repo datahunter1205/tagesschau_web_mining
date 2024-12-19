@@ -3,23 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tagesschau-Web Mining von Rakibul Haque: Eine Relationsanalyse der auf der tagesschau.de vorkommenden Tags. Hierbei wird ein Netzwerk aus Tags zur Exploration bereitgestellt.">
     <title>Tagesschau-Web Mining Viewer</title>
     <!-- Lokale OpenSeadragon-Bibliothek -->
     <script src="openseadragon/openseadragon.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
             margin: 0;
+            padding: 0;
+            height: 100vh;
             overflow: hidden;
         }
+
         #openseadragon {
             width: 100%;
-            height: 100vh;
+            height: 100%;
+            position: relative;
         }
+
+        .info-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-overlay header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .info-overlay .content {
+            margin-top: 10px;
+        }
+
+        .info-overlay .toggle-button {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50%; /* Rundes Icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .info-overlay.minimized .content {
+            display: none; /* Versteckt den Inhalt */
+        }
+
+        .linkedin-icon {
+            position: absolute;
+            bottom: 10px; /* Abstand vom unteren Rand des Footers */
+            right: 10px; /* Abstand vom rechten Rand */
+        }
+
+        .linkedin-icon a img.linkedin-logo {
+            width: 30px; /* Größe des Logos */
+            height: auto;
+            border-radius: 30%; /* Rundes Design */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Schatten für 3D-Effekt */
+        }
+
+        .linkedin-icon a img.linkedin-logo:hover {
+            transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+            transition: transform 0.2s;
+        }
+
     </style>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+    <!-- Container für OpenSeadragon -->
     <div id="openseadragon"></div>
+
+    <!-- Overlay für Beschreibung -->
+    <div class="info-overlay" id="infoOverlay">
+        <header>
+            <span>Tagesschau-Web Mining</span>
+            <button class="toggle-button" onclick="toggleOverlay()">-</button>
+        </header>
+        <div class="content">
+            <p>
+                Dieses Netzwerk zeigt eine vollständige Darstellung der Tag-Relationen der Artikel auf Tagesschau.de, in die man rein- und rauszoomen kann. 
+                Eine deutlich interaktive Version findest du unter 
+                <a href="https://rakibulhaque.de/tagesschau_web_network" target="_blank">Tagesschau-Web Interactive Network</a>.
+                <br><br>
+                Datenstand vom 01.01.2023 - 17.12.2024
+
+                <br><br>
+                © 2024 Rakibul Haque
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Rakibul Haque
+        <div class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/r-haque/" target="_blank" title="LinkedIn-Profil">
+                <img src="images/LinkedIn_logo_initials.png" alt="LinkedIn" class="linkedin-logo">
+            </a>
+        </div>
+    </footer>
+
     <script>
         // OpenSeadragon initialisieren
         var viewer = OpenSeadragon({
@@ -27,6 +128,16 @@
             prefixUrl: "openseadragon/images/",
             tileSources: "tiles/deepzoom_output.dzi"
         });
+
+        // Funktion zum Minimieren/Maximieren
+        function toggleOverlay() {
+            var overlay = document.getElementById('infoOverlay');
+            overlay.classList.toggle('minimized'); // Fügt die Klasse 'minimized' hinzu oder entfernt sie
+
+            var button = overlay.querySelector('.toggle-button');
+            // Ändert das Symbol: "-" für geöffnet, "+" für minimiert
+            button.textContent = overlay.classList.contains('minimized') ? '+' : '-';
+        }
     </script>
 </body>
 </html>
