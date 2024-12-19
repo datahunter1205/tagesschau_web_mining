@@ -9,13 +9,13 @@
   },
   "text": {
     "more": "Ein Graph über die vorkommenden Tags und ihre Beziehung untereinander auf der Internetpräsenz der Tagesschau. Zeitraum: 01.01.2023 bis 17.12.2024.",
-    "intro": "Relationsanalyse der Tags auf der Internetpräsenz der Tagesschau",
+    "intro": "Relationsanalyse der Tags auf der Internetpräsenz der Tagesschau.<br>\n Zeitraum: 01.01.2023 bis 17.12.2024.",
     "title": "Tagesschau-Web Mining<br>\n Von Rakibul Haque"
   },
   "legend": {
     "edgeLabel": "Gemeinsames Vorkommen",
-    "colorLabel": "Ressort: lila=Ausland, rot=Inland, grün=Wirtschaft, orange=Wissen",
-    "nodeLabel": "Tags der Tagesschau-Web"
+    "colorLabel": "Ressort:<br>\n lila=Ausland<br>\n rot=Inland<br>\n grün=Wirtschaft<br>\n orange=Wissen",
+    "nodeLabel": "Tags der Tagesschau-Web. Größe wird durch Anzahl der Verwendung in Artikel bestimmt"
   },
   "features": {
     "search": true,
