@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Rakibul Haque"
+  },
+  "text": {
+    "more": "Ein Graph über die vorkommenden Tags und ihre Beziehung untereinander auf der Internetpräsenz der Tagesschau. Zeitraum: 01.01.2023 bis 17.12.2024.",
+    "intro": "Relationsanalyse der Tags auf der Internetpräsenz der Tagesschau.<br>\n Zeitraum: 01.01.2023 bis 17.12.2024.",
+    "title": "Tagesschau-Web Mining<br>\n Von Rakibul Haque"
+  },
+  "legend": {
+    "edgeLabel": "Gemeinsames Vorkommen",
+    "colorLabel": "Ressort:<br>\n lila=Ausland<br>\n blau=Inland<br>\n grün=Wirtschaft<br>\n orange=Wissen",
+    "nodeLabel": "Tags der Tagesschau-Web. Größe wird durch Anzahl der Verwendung in Artikel bestimmt"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "ressort",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": false,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 6,
+      "defaultLabelHoverColor": "#fff",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 15,
+      "labelSize": "proportional"
+    },
+    "graphProperties": {
+      "maxEdgeSize": 1.5,
+      "minEdgeSize": 1.0,
+      "minNodeSize": 2,
+      "maxNodeSize": 10
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
