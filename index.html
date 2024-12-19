@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt mit Vorschaubildern</title>
     <style>
+        /* Gesamtes Layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Mindesthöhe für die ganze Seite */
         }
 
         header {
@@ -26,6 +30,7 @@
         }
 
         main {
+            flex: 1; /* Nimmt den verfügbaren Platz ein */
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -50,7 +55,7 @@
 
         .preview-links {
             display: flex;
-            gap: 15px; /* Abstand zwischen den Bildern */
+            gap: 15px;
             margin-top: 10px;
         }
 
@@ -60,16 +65,41 @@
         }
 
         .preview-links img {
-            width: 200px; /* Breite der Vorschaubilder */
-            height: 150px; /* Höhe der Vorschaubilder */
-            object-fit: cover; /* Schneidet das Bild, ohne das Seitenverhältnis zu verändern */
-            border-radius: 5px; /* Abgerundete Ecken */
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .preview-links img:hover {
-            transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .linkedin-icon {
+            margin-top: 10px;
+        }
+
+        .linkedin-icon a img {
+            width: 30px; /* Breite des Icons */
+            height: auto; /* Proportional skalieren */
+            border-radius: 50%; /* Rundes Design */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .linkedin-icon a img:hover {
+            transform: scale(1.1); /* Leichtes Vergrößern beim Hover */
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
@@ -98,5 +128,14 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Rakibul Haque</p>
+        <div class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/r-haque/" target="_blank" title="LinkedIn-Profil">
+                <img src="LinkedIn_logo_initials.png" alt="LinkedIn-Icon">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
